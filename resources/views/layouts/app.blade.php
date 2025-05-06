@@ -6,8 +6,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     
     <!--@vite(['resources/css/app.css', 'resources/js/app.js'])-->
-    <link rel="stylesheet" href="{{ asset('build/assets/app-ORKAG0pD.css') }}">
-<script type="module" src="{{ asset('build/assets/app-Bo-u61x1.js') }}"></script>
+    <link rel="stylesheet" href="{{ secure_asset('build/assets/app-ORKAG0pD.css') }}">
+    <script type="module" src="{{ secure_asset('build/assets/app-Bo-u61x1.js') }}"></script>
 
     <title>Spa Natural</title>
 
