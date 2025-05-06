@@ -17,6 +17,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!-- Tu CSS personalizado (si lo tenés en public/css/estilos.css) -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
 

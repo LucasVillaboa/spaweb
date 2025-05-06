@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     laravel({
@@ -10,6 +9,7 @@ export default defineConfig({
     }),
   ],
   build: {
-    outDir: 'public/dist', // Esto configura el directorio de salida
+    outDir: 'public/build',
+    manifest: true,
   },
 });
