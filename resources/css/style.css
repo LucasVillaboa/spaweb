@@ -82,14 +82,14 @@ body {
 }
 
 .btn-outline-light {
-    color: #008080;
-    border-color: #008080;
+    color: #ffffff;
+    border-color: #ffffff;
 }
 
 .btn-outline-light:hover {
-    background-color: #008080;
-    color: white;
- 
+    background-color: #ffffff;
+    color: #008080;
+    border-color: #ffffff;
 }
 
 .btn-light.text-teal {
