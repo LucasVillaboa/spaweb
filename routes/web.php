@@ -1,11 +1,21 @@
 <?php
+<<<<<<< HEAD
 
+=======
+use App\Http\Controllers\DashboardController;
+>>>>>>> 58f0530 (Se agrega Panel)
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\TurnoController;
 use App\Http\Controllers\SedeController;
 use App\Http\Controllers\ConsultaController;
 
+<<<<<<< HEAD
+=======
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth'])->name('dashboard');
+
+
+>>>>>>> 58f0530 (Se agrega Panel)
 Route::get('/', function () {
     return view('inicio');
 });
@@ -22,10 +32,17 @@ Route::post('/contacto', [ContactoController::class, 'enviarFormulario'])->name(
 
 Route::get('/sedes', [SedeController::class, 'index'])->name('sedes');
 
+<<<<<<< HEAD
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+=======
+/*Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+*/
+>>>>>>> 58f0530 (Se agrega Panel)
 Route::get('/consultas', [ConsultaController::class, 'index'])->middleware('auth')->name('consultas.index');
 
 // Eliminar o comentar esta si sigue generando error

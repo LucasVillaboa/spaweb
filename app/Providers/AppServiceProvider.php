@@ -2,7 +2,10 @@
 
 namespace App\Providers;
 
+<<<<<<< HEAD
 use Illuminate\Support\Facades\URL;
+=======
+>>>>>>> 58f0530 (Se agrega Panel)
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -18,6 +21,7 @@ class AppServiceProvider extends ServiceProvider
     /**
      * Bootstrap any application services.
      */
+<<<<<<< HEAD
     public function boot()
     {
         if (config('app.env') === 'production') {
@@ -25,3 +29,10 @@ class AppServiceProvider extends ServiceProvider
         }
     }
 }
+=======
+    public function boot(): void
+    {
+        //
+    }
+}
+>>>>>>> 58f0530 (Se agrega Panel)

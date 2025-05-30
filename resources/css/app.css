@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 @tailwind components;
 @tailwind utilities;
 
+=======
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+>>>>>>> 58f0530 (Se agrega Panel)

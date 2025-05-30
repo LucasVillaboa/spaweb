@@ -1,0 +1,144 @@
+.servicios {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    margin-top: 2em;
+}
+
+.servicio {
+    background-color: #f2f2f2;
+    padding: 1.5em;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.servicio h3 {
+    color: #008080;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #c3e6cb;
+}
+
+.inicio {
+    background-color: #f3f3f3;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.inicio h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.inicio p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.imagen-inicio {
+    margin-top: 30px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+/* General */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #008080 !important; /* Color teal oscuro más sólido */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff !important;
+    font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #a2f5ea !important; /* Un verde agua más claro */
+}
+
+.navbar-nav .active {
+    color: #ffffff !important;
+    font-weight: bold;
+    border-bottom: 2px solid #a2f5ea;
+}
+
+.btn-outline-light {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.btn-outline-light:hover {
+    background-color: #ffffff;
+    color: #008080;
+    border-color: #ffffff;
+}
+
+.btn-light.text-teal {
+    color: #008080;
+    background-color: #ffffff;
+}
+
+.btn-light.text-teal:hover {
+    background-color: #e0f7f7;
+    color: #006666;
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+/* Acciones */
+.acciones {
+    background-color: #00695c;
+    color: white;
+}
+
+.acciones .btn {
+    margin-top: 20px;
+}
+
+/* Ajustes generales */
+.text-teal {
+    color: #00695c;
+}
+.object-fit-cover {
+    object-fit: cover;
+}
+.bg-teal {
+    background-color: #20c997 !important;
+}
+
+
+

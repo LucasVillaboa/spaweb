@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<<<<<<< HEAD
 <div class="container py-5">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -22,6 +23,35 @@
                     <a href="{{ url('/turnos') }}" class="btn btn-outline-teal mt-3">Ver mis turnos</a>
                 </div>
             </div>
+=======
+<div class="container py-4">
+    <h1 class="text-2xl font-bold mb-4">Panel de Control</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="bg-white shadow rounded p-4">
+            <h2 class="text-lg font-semibold">Clientes</h2>
+            <p class="text-3xl">{{ $cantidadClientes }}</p>
+        </div>
+
+        <div class="bg-white shadow rounded p-4">
+            <h2 class="text-lg font-semibold">Consultas</h2>
+            <p class="text-3xl">{{ $cantidadConsultas }}</p>
+        </div>
+
+        <div class="bg-white shadow rounded p-4">
+            <h2 class="text-lg font-semibold">Profesionales</h2>
+            <p class="text-3xl">{{ $cantidadProfesionales }}</p>
+        </div>
+
+        <div class="bg-white shadow rounded p-4">
+            <h2 class="text-lg font-semibold">Servicios</h2>
+            <p class="text-3xl">{{ $cantidadServicios }}</p>
+        </div>
+
+        <div class="bg-white shadow rounded p-4">
+            <h2 class="text-lg font-semibold">Turnos Totales</h2>
+            <p class="text-3xl">{{ $turnosActivos }}</p>
+>>>>>>> 58f0530 (Se agrega Panel)
         </div>
     </div>
 </div>

@@ -16,8 +16,11 @@
         "postcss": "^8.4.31",
         "tailwindcss": "^3.1.0",
         "vite": "^6.2.4"
+<<<<<<< HEAD
     },
     "dependencies": {
         "bootstrap": "^5.3.6"
+=======
+>>>>>>> 58f0530 (Se agrega Panel)
     }
 }

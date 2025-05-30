@@ -52,7 +52,11 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'url' => env('APP_URL', 'https://spaweb-production-4091.up.railway.app'),
+=======
+    'url' => env('APP_URL', 'http://localhost'),
+>>>>>>> 58f0530 (Se agrega Panel)
 
     /*
     |--------------------------------------------------------------------------
