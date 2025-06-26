@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Cliente;
@@ -32,5 +33,17 @@ class DashboardController extends Controller
         'cantidadConsultas'
     ));
 }
+
+public function clienteDashboard()
+{
+    $servicios = Servicio::all(); // <-- importante
+    $profesionales = User::role('profesional')->get();
+
+    return view('cliente.dashboard', compact('servicios', 'profesionales'));
+}
+
+
+
+
 }
 

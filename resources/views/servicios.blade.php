@@ -27,6 +27,7 @@
             <i class="bi bi-heart-pulse fs-1 text-teal mb-3"></i>
             <h5 class="card-title">Masajes Relajantes</h5>
             <p class="card-text">Anti-estrés, descontracturantes, piedras calientes y más para tu bienestar físico y mental.</p>
+            <p class="card-text">$7.000,00</p>
           </div>
         </div>
       </div>
@@ -39,6 +40,7 @@
             <i class="bi bi-brush fs-1 text-teal mb-3"></i>
             <h5 class="card-title">Belleza y Cuidado</h5>
             <p class="card-text">Lifting de pestañas, depilación facial, belleza de manos y pies para verte y sentirte bien.</p>
+            <p class="card-text">$6.500,00</p>
           </div>
         </div>
       </div>
@@ -54,6 +56,7 @@
             <i class="bi bi-droplet-half fs-1 text-teal mb-3"></i>
             <h5 class="card-title">Tratamientos Corporales</h5>
             <p class="card-text">Reducción de celulitis, criofrecuencia, dermohealth, ultracavitación y más técnicas innovadoras.</p>
+            <p class="card-text">$9.000,00</p>
           </div>
         </div>
       </div>
@@ -66,6 +69,7 @@
             <i class="bi bi-emoji-smile fs-1 text-teal mb-3"></i>
             <h5 class="card-title">Tratamientos Faciales</h5>
             <p class="card-text">Mejorá el aspecto y la salud de tu piel con tecnología avanzada.</p>
+            <p class="card-text">$8.500,00</p>
           </div>
         </div>
       </div>
@@ -85,6 +89,7 @@
             <i class="bi bi-people fs-1 text-teal mb-3"></i>
             <h5 class="card-title">Servicios Grupales</h5>
             <p class="card-text">Disfrutá de yoga e hidromasajes en grupo, conectando cuerpo y mente.</p>
+            <p class="card-text">$10.000,00</p>
           </div>
         </div>
       </div>

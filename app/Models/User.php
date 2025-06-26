@@ -2,15 +2,14 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
-    /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, Notifiable;
+    use HasFactory, Notifiable, HasRoles;
 
     /**
      * The attributes that are mass assignable.
@@ -21,6 +20,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'activo'
     ];
 
     /**
@@ -34,29 +34,32 @@ class User extends Authenticatable
     ];
 
     /**
-     * Get the attributes that should be cast.
+     * The attributes that should be cast.
      *
      * @return array<string, string>
      */
     protected function casts(): array
-{
-    return [
-        'email_verified_at' => 'datetime',
-        'password' => 'hashed',
-        'is_admin' => 'boolean', // <- esto es clave
-    ];
+    {
+        return [
+            'email_verified_at' => 'datetime',
+            'password' => 'hashed',
+        ];
+    }
+
+    // Métodos de ayuda personalizados por si los necesitás (opcional)
+    public function esCliente(): bool
+    {
+        return $this->hasRole('cliente');
+    }
+
+    public function esProfesional(): bool
+    {
+        return $this->hasRole('profesional');
+    }
+
+    public function esAdmin(): bool
+    {
+        return $this->hasRole('admin');
+    }
 }
 
-
-public function esCliente() {
-    return $this->rol === 'cliente';
-}
-
-public function esProfesional() {
-    return $this->rol === 'profesional';
-}
-
-public function esAdmin() {
-    return $this->rol === 'admin';
-}
-}

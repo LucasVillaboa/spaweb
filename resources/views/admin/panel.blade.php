@@ -6,36 +6,68 @@
 <div class="container py-5">
     <h2 class="mb-4 text-teal text-center">Panel de Administración</h2>
 
-    <div class="row text-center">
-        <div class="col-md-4 mb-4">
-            <div class="card border-success shadow">
-                <div class="card-body">
-                    <i class="bi bi-people fs-1 text-success"></i>
-                    <h5 class="card-title mt-3">Clientes Registrados</h5>
-                    <p class="fs-4">{{ $cantidadClientes }}</p>
-                </div>
-            </div>
-        </div>
+    @if (session('success'))
+        <div class="alert alert-success">{{ session('success') }}</div>
+    @endif
 
-        <div class="col-md-4 mb-4">
-            <div class="card border-primary shadow">
+    {{-- Estadísticas generales --}}
+    <div class="row text-center mb-4">
+        <div class="col-md-4">
+            <div class="card shadow-sm">
                 <div class="card-body">
-                    <i class="bi bi-gear fs-1 text-primary"></i>
-                    <h5 class="card-title mt-3">Servicios Activos</h5>
-                    <p class="fs-4">{{ $cantidadServicios }}</p>
+                    <h5 class="card-title">Usuarios registrados</h5>
+                    <p class="fs-3">{{ $cantidadClientes }}</p>
                 </div>
             </div>
         </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Servicios activos</h5>
+                    <p class="fs-3">{{ $cantidadServicios }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Turnos totales</h5>
+                    <p class="fs-3">{{ $cantidadTurnos }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <div class="col-md-4 mb-4">
-            <div class="card border-warning shadow">
-                <div class="card-body">
-                    <i class="bi bi-calendar-check fs-1 text-warning"></i>
-                    <h5 class="card-title mt-3">Turnos Reservados</h5>
-                    <p class="fs-4">{{ $cantidadTurnos }}</p>
-                </div>
-            </div>
-        </div>
+    {{-- Acciones rápidas --}}
+    <h4 class="text-center mt-5">Acciones rápidas</h4>
+    <div class="d-flex flex-wrap justify-content-center gap-3 mt-3">
+
+        {{-- Servicios --}}
+        <a href="{{ route('admin.servicios.index') }}" class="btn btn-outline-success">
+            🛠️ Gestionar Servicios
+        </a>
+        <a href="{{ route('admin.servicios.create') }}" class="btn btn-outline-success">
+            ➕ Crear Servicio
+        </a>
+
+
+
+        {{-- Turnos --}}
+               <a href="{{ route('admin.turnos.crear') }}" class="btn btn-outline-primary">
+     📅 Crear Turno
+</a>
+        <a href="{{ route('admin.turnos') }}" class="btn btn-outline-primary">
+            📅 Ver Turnos
+        </a>
+
+        <a href="{{ route('admin.usuarios.index') }}" class="btn btn-warning">Gestionar Usuarios</a>
+
+
+        {{-- Próximos módulos --}}
+        {{-- <a href="{{ route('admin.turnos.create') }}" class="btn btn-outline-success">➕ Crear Turno</a> --}}
+        {{-- <a href="{{ route('admin.usuarios.index') }}" class="btn btn-outline-dark">👥 Gestionar Usuarios</a> --}}
+        {{-- <a href="{{ route('admin.reportes.servicios') }}" class="btn btn-outline-info">📊 Reporte por Servicio</a> --}}
+        {{-- <a href="{{ route('admin.reportes.profesionales') }}" class="btn btn-outline-info">📊 Reporte por Profesional</a> --}}
     </div>
 </div>
 @endsection

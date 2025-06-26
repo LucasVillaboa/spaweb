@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-teal navbar-dark shadow-sm">
     <div class="container">
-        <a class="navbar-brand" href="{{ url('/') }}">Spa Natural</a>
+        <a class="navbar-brand" href="{{ url('/') }}">Spa Sentirse Bien</a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
@@ -18,7 +18,7 @@
                     <a class="nav-link {{ request()->is('sedes') ? 'active' : '' }}" href="{{ route('sedes') }}">Sedes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->is('turnos') ? 'active' : '' }}" href="{{ route('turnos.enviar') }}">Turnos</a>
+                    <a class="nav-link {{ request()->is('turnos') ? 'active' : '' }}" href="{{ route('cliente.dashboard') }}">Turnos</a>
                 </li>
             </ul>
 
@@ -37,9 +37,7 @@
                             <a href="{{ route('cliente.dashboard') }}" class="btn btn-light me-2">Panel</a>
                         @endif
 
-                        <a href="{{ route('consultas.index') }}" class="btn btn-outline-light me-2">Consultas</a>
-
-                        <a href="{{ route('turnos.formulario') }}" class="btn btn-outline-light me-2">Mis Turnos</a>
+                        
 
                         @if(Auth::user()->is_admin)
                             <a href="{{ route('admin.turnos') }}" class="btn btn-outline-light me-2">Turnos Admin</a>

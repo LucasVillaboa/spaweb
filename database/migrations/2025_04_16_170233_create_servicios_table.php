@@ -11,10 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('servicios', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-        });
+         Schema::create('servicios', function (Blueprint $table) {
+        $table->id();
+        $table->string('nombre');
+        $table->text('descripcion')->nullable(); // opcional: si querés permitir que esté vacía
+        $table->decimal('precio', 8, 2); // formato para manejar decimales tipo 700.00
+        $table->timestamps();
+    });
     }
 
     /**

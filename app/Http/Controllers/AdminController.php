@@ -16,4 +16,13 @@ class AdminController extends Controller
 
         return view('admin.panel', compact('cantidadClientes', 'cantidadServicios', 'cantidadTurnos'));
     }
+
+    // Elimina un turno
+public function eliminar($id)
+{
+    $turno = Turno::findOrFail($id);
+    $turno->delete();
+
+    return redirect()->route('admin.turnos')->with('success', 'Turno eliminado correctamente.');
+}
 }

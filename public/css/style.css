@@ -142,3 +142,27 @@ body {
 
 
 
+
+
+
+.tarjeta-visual {
+    background: linear-gradient(135deg, #4d4dff, #00bcd4);
+    color: white;
+    border-radius: 16px;
+    padding: 20px;
+    max-width: 400px;
+    font-family: 'Courier New', monospace;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.tarjeta-visual .logo-tarjeta {
+    width: 60px;
+    height: auto;
+    margin-bottom: 10px;
+}
+.tarjeta-visual .numero,
+.tarjeta-visual .nombre,
+.tarjeta-visual .vencimiento {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
