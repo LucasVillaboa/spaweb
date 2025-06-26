@@ -1,9 +1,5 @@
 /.phpunit.cache
 /node_modules
-<<<<<<< HEAD
-=======
-/public/build
->>>>>>> 58f0530 (Se agrega Panel)
 /public/hot
 /public/storage
 /storage/*.key
