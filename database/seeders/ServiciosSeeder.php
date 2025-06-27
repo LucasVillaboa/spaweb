@@ -44,7 +44,3 @@ class ServiciosSeeder extends Seeder
         ]);
     }
 }
-
-
-
-

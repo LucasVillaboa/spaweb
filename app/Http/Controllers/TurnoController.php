@@ -117,7 +117,16 @@ $turnoExistente = Turno::where('profesional_id', $request->profesional_id)
                 ->subject('📩 Comprobante de Turno - Sentirse Bien');
         });
 
-        return redirect()->back()->with('success', '¡Tu turno fue solicitado con éxito! Revisa tu correo para el comprobante.');
+        //return redirect()->back()->with('success', '¡Tu turno fue solicitado con éxito! Revisa tu correo para el comprobante.');
+        return view('cliente.turno_confirmado', [
+    'fecha' => $fechaHoraTurno->format('d/m/Y'),
+    'hora' => $fechaHoraTurno->format('H:i'),
+    'servicios' => $serviciosTexto,
+    'profesional' => $profesional->name,
+    'medio_pago' => $request->medio_pago,
+    'precio_final' => number_format($precioFinal, 2, ',', '.'),
+]);
+
 
     } catch (\Exception $e) {
         return back()->withErrors(['error' => 'Error al crear el turno: ' . $e->getMessage()]);
