@@ -103,7 +103,7 @@
         <h2 class="mb-4">¿Listo para relajarte?</h2>
         <p class="lead mb-4">Reservá tu visita o escribinos para más información.</p>
         <a href="{{ route('turnos.formulario') }}" class="btn btn-light btn-lg me-3">Reservá tu turno</a>
-        <a href="{{ route('contacto.formulario') }}" class="btn btn-light btn-lg me-3">Contacto</a>
+        <!--<a href="{{ route('contacto.formulario') }}" class="btn btn-light btn-lg me-3">Contacto</a>-->
         
     </div>
 </section>
