@@ -118,7 +118,7 @@ $turnoExistente = Turno::where('profesional_id', $request->profesional_id)
         });
 
         //return redirect()->back()->with('success', '¡Tu turno fue solicitado con éxito! Revisa tu correo para el comprobante.');
-        return view('cliente.turno_confirmado', [
+        return view('cliente.dashboard', [
     'fecha' => $fechaHoraTurno->format('d/m/Y'),
     'hora' => $fechaHoraTurno->format('H:i'),
     'servicios' => $serviciosTexto,
