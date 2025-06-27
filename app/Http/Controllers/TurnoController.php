@@ -117,7 +117,8 @@ $turnoExistente = Turno::where('profesional_id', $request->profesional_id)
                 ->subject('📩 Comprobante de Turno - Sentirse Bien');
         });
 
-        return redirect()->back()->with('success', '¡Tu turno fue solicitado con éxito! Revisa tu correo para el comprobante.');
+        //return redirect()->back()->with('success', '¡Tu turno fue solicitado con éxito! Revisa tu correo para el comprobante.');
+        return redirect()->route('cliente.dashboard')->with('success', '¡Tu turno fue solicitado con éxito! Revisa tu correo para el comprobante.');
 
 
     } catch (\Exception $e) {
