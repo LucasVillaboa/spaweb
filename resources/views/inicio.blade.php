@@ -81,8 +81,8 @@
     <div class="container">
         <h2 class="text-teal mb-4">Nuestro Equipo</h2>
         <p class="lead text-muted mb-5">Profesionales comprometidos con tu bienestar físico y emocional.</p>
-
-        <div class="row">
+        <div class="row justify-content-center">
+        <!--<div class="row"> -->
             <!-- Lic. Juan Perez -->
             <div class="col-md-3 mb-4">
                 <div class="card h-100 shadow border-0">
@@ -115,8 +115,10 @@
                     </div>
                 </div>
             </div>
+  
 
-            <!-- Dra. Ana Felicidad -->
+
+            <!-- Dra. Ana Felicidad 
             <div class="col-md-3 mb-4">
                 <div class="card h-100 shadow border-0">
                     <img src="/images/equipo/ana.jpg" class="card-img-top" alt="Dra. Ana Felicidad">
@@ -125,11 +127,12 @@
                         <p class="card-text text-muted">Directora general. Referente en medicina estética y promotora del equilibrio cuerpo-mente.</p>
                     </div>
                 </div>
-            </div>
+            </div>-->
+
         </div>
     </div>
-</section>
-
+</section>        
+ 
 
 <!-- Llamado a la acción -->
 <section class="py-5 bg-teal text-white text-center">
