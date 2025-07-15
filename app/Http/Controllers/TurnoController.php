@@ -58,9 +58,13 @@ $turnoExistente = Turno::where('profesional_id', $request->profesional_id)
 
 
     // Calcular precios
-    $precioPorServicio = 5000;
-    $cantidadServicios = count($request->servicios);
-    $precioTotal = $precioPorServicio * $cantidadServicios;
+   $precioTotal = 0;
+$servicios = Servicio::whereIn('id', $request->servicios)->get();
+
+foreach ($servicios as $servicio) {
+    $precioTotal += $servicio->precio; // Asumiendo que la tabla tiene una columna "precio"
+}
+
     $descuento = 0;
 
     if ($request->medio_pago === 'debito') {
