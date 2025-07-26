@@ -37,8 +37,6 @@
                             <a href="{{ route('cliente.dashboard') }}" class="btn btn-light me-2">Panel</a>
                         @endif
 
-                        
-
                         @if(Auth::user()->is_admin)
                             <a href="{{ route('admin.turnos') }}" class="btn btn-outline-light me-2">Turnos Admin</a>
                         @endif
@@ -56,3 +54,20 @@
         </div>
     </div>
 </nav>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var navLinks = document.querySelectorAll('.navbar-collapse .nav-link, .navbar-collapse form button');
+    var navbarCollapse = document.querySelector('.navbar-collapse');
+
+    navLinks.forEach(function(link) {
+      link.addEventListener('click', function () {
+        var bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+          toggle: false
+        });
+        bsCollapse.hide();
+      });
+    });
+  });
+</script>
