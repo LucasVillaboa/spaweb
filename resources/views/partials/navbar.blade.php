@@ -3,10 +3,9 @@
         <a class="navbar-brand" href="{{ url('/') }}">Spa Sentirse Bien</a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-</button>
-
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto me-3">
@@ -57,19 +56,21 @@
     </div>
 </nav>
 
-
+{{-- Script para cerrar el navbar automáticamente en mobile --}}
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    var navLinks = document.querySelectorAll('.navbar-collapse .nav-link, .navbar-collapse form button');
-    var navbarCollapse = document.querySelector('.navbar-collapse');
+    document.addEventListener("DOMContentLoaded", function () {
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.querySelector('#navbarNav');
+        const collapseInstance = new bootstrap.Collapse(navbarCollapse, { toggle: false });
 
-    navLinks.forEach(function(link) {
-      link.addEventListener('click', function () {
-        var bsCollapse = new bootstrap.Collapse(navbarCollapse, {
-          toggle: false
+        document.querySelectorAll('#navbarNav .nav-link, #navbarNav form button, #navbarNav .btn').forEach(function (el) {
+            el.addEventListener('click', function () {
+                // Solo cerrar si está visible (es decir, mobile abierto)
+                if (window.getComputedStyle(navbarToggler).display !== 'none') {
+                    collapseInstance.hide();
+                }
+            });
         });
-        bsCollapse.hide();
-      });
     });
-  });
 </script>
+
