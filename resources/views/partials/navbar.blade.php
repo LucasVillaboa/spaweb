@@ -2,8 +2,8 @@
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">Spa Sentirse Bien</a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -57,22 +57,25 @@
         const navbarToggler = document.querySelector('.navbar-toggler');
         const navbarCollapse = document.getElementById('navbarNav');
 
-        // Verificamos que ambos elementos existan
+        // Alternar apertura/cierre al hacer clic en el botón hamburguesa
         if (navbarToggler && navbarCollapse) {
-            // Al hacer clic en cualquier enlace o botón dentro del navbar expandido
+            navbarToggler.addEventListener('click', function () {
+                navbarCollapse.classList.toggle('show');
+            });
+
+            // Cerrar el menú si se hace clic en un enlace o botón dentro del navbar
             navbarCollapse.querySelectorAll('a, button').forEach(function (element) {
                 element.addEventListener('click', function () {
-                    // Si el botón del menú hamburguesa está visible (modo móvil)
                     const isTogglerVisible = window.getComputedStyle(navbarToggler).display !== 'none';
-
                     if (isTogglerVisible && navbarCollapse.classList.contains('show')) {
-                        navbarToggler.click(); // Esto cierra el menú
+                        navbarCollapse.classList.remove('show');
                     }
                 });
             });
         }
     });
 </script>
+
 
 
 
