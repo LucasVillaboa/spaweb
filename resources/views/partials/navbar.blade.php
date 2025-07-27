@@ -52,4 +52,28 @@
     </div>
 </nav>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.getElementById('navbarNav');
+
+        // Verificamos que ambos elementos existan
+        if (navbarToggler && navbarCollapse) {
+            // Al hacer clic en cualquier enlace o botón dentro del navbar expandido
+            navbarCollapse.querySelectorAll('a, button').forEach(function (element) {
+                element.addEventListener('click', function () {
+                    // Si el botón del menú hamburguesa está visible (modo móvil)
+                    const isTogglerVisible = window.getComputedStyle(navbarToggler).display !== 'none';
+
+                    if (isTogglerVisible && navbarCollapse.classList.contains('show')) {
+                        navbarToggler.click(); // Esto cierra el menú
+                    }
+                });
+            });
+        }
+    });
+</script>
+
+
+
 
