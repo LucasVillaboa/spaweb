@@ -27,19 +27,15 @@
                 <div class="d-flex">
                     @auth
                         @php
-                            $role = Auth::user()->role;
+                            $user = Auth::user();
                         @endphp
 
-                        @if ($role === 'admin')
+                        @if ($user->hasRole('admin'))
                             <a href="{{ route('admin.panel') }}" class="btn btn-light me-2">Panel</a>
-                        @elseif ($role === 'profesional')
+                        @elseif ($user->hasRole('profesional'))
                             <a href="{{ route('profesional.dashboard') }}" class="btn btn-light me-2">Panel</a>
                         @else
                             <a href="{{ route('cliente.dashboard') }}" class="btn btn-light me-2">Panel</a>
-                        @endif
-
-                        @if(Auth::user()->is_admin)
-                            <a href="{{ route('admin.turnos') }}" class="btn btn-outline-light me-2">Turnos Admin</a>
                         @endif
 
                         <form method="POST" action="{{ route('logout') }}">
@@ -56,21 +52,4 @@
     </div>
 </nav>
 
-{{-- Script para cerrar el navbar automáticamente en mobile --}}
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const navbarToggler = document.querySelector('.navbar-toggler');
-        const navbarCollapse = document.querySelector('#navbarNav');
-        const collapseInstance = new bootstrap.Collapse(navbarCollapse, { toggle: false });
-
-        document.querySelectorAll('#navbarNav .nav-link, #navbarNav form button, #navbarNav .btn').forEach(function (el) {
-            el.addEventListener('click', function () {
-                // Solo cerrar si está visible (es decir, mobile abierto)
-                if (window.getComputedStyle(navbarToggler).display !== 'none') {
-                    collapseInstance.hide();
-                }
-            });
-        });
-    });
-</script>
 
